@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.todo {
+  width: 500px;
+  margin: 30px auto;
+  border: 1px solid #16a086;
+}
+@media (max-width: 768px) {
+  .todo {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+.todo header {
+  background-color: #16a086;
+  padding: 10px;
+}
+.todo header h2 {
+  color: #fff;
+  font-size: 20px;
+}
+.todo .add {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+.todo .add input[type=text] {
+  width: 400px;
+  padding: 5px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #16a086;
+  border-left: 0;
+}
+@media (max-width: 768px) {
+  .todo .add input[type=text] {
+    width: 80%;
+  }
+}
+.todo .add input[type=text]:focus-visible {
+  outline: 0;
+}
+.todo .add input[type=submit] {
+  border: 0;
+  background: #16a086;
+  color: #fff;
+  padding: 5px 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.todo .tools {
+  height: 400px;
+  position: relative;
+  overflow: scroll;
+}
+@media (max-width: 768px) {
+  .todo .tools {
+    height: calc(100vh - 94px);
+  }
+}
+.todo .tools::-webkit-scrollbar {
+  width: 2px;
+}
+.todo .tools::-webkit-scrollbar-thumb {
+  background: #16a086;
+  border-radius: 10px;
+}
+.todo .tools .tool {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo .tools .tool .text-container .tool-text {
+  width: 400px;
+  border: 0;
+  margin-left: -3px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .todo .tools .tool .text-container .tool-text {
+    width: 300px;
+  }
+}
+.todo .tools .tool .text-container .tool-text:focus-visible {
+  outline: 0;
+}
+.todo .tools .tool .text-container .time {
+  font-size: 11px;
+  color: #777;
+}
+.todo .tools .tool .edit-delete {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.todo .tools .tool .edit-delete .fa-trash {
+  color: red;
+  cursor: pointer;
+}
+.todo .tools .tool .edit-delete .fa-pen {
+  color: #16a086;
+  cursor: pointer;
+}
+.todo .tools .if-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #777;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=todo.css.map */
