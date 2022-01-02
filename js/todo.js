@@ -222,7 +222,11 @@ function cogClick(cog,colors) {
 cog.onclick = function() {
     cogClick(cog,colors);
 }
-document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+if(localStorage.getItem(`color`)){
+    document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+}else {
+    document.documentElement.style.setProperty(`--main-color`, `#16a086`);
+}
 color1.onclick = function () {
     localStorage.setItem(`color`,`#16a086`);
     document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
