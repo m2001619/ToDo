@@ -198,3 +198,44 @@ add.onclick = function() {
     ifEmpty.style.display = `none`;
 }
 
+/* Start Theme */
+let cog = document.querySelector(`.fa-cog`);
+let colors = document.querySelector(`.colors`);
+let color1 = document.querySelector(`.color-1`);
+let color2 = document.querySelector(`.color-2`);
+let color3 = document.querySelector(`.color-3`);
+let color4 = document.querySelector(`.color-4`);
+function cogClick(cog,colors) {
+    cog.onclick = function() {
+        cog.style.transform = `rotate(-360deg)`;
+        colors.style.transition = `width .5s linear`;
+        colors.style.width = `145px`;
+        colors.style.backgroundColor = `#fff`;
+        cog.onclick = function() {
+            cog.style.transform = `rotate(360deg)`;
+            colors.style.transition = `width .2s linear`;
+            colors.style.width = `0px`;
+            cogClick(cog,colors);
+        }
+    }
+}
+cog.onclick = function() {
+    cogClick(cog,colors);
+}
+document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+color1.onclick = function () {
+    localStorage.setItem(`color`,`#16a086`);
+    document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+}
+color2.onclick = function () {
+    localStorage.setItem(`color`,`#db4c3f`);
+    document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+}
+color3.onclick = function () {
+    localStorage.setItem(`color`,`#1f1432`);
+    document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+}
+color4.onclick = function () {
+    localStorage.setItem(`color`,`#59bbd8`);
+    document.documentElement.style.setProperty(`--main-color`, `${localStorage.getItem(`color`)}`);
+}

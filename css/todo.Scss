@@ -1,5 +1,4 @@
 // Variables
-$mainColor : #16a086;
 $mainPadding : 10px;
 * {
     box-sizing: border-box;
@@ -15,14 +14,66 @@ $mainPadding : 10px;
         margin: 0;
     }
     margin: 30px auto;
-    border: 1px solid $mainColor;
+    border: 1px solid var(--main-color);
     // header
     header {
-        background-color: $mainColor;
         padding: $mainPadding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--main-color);
+        color: #fff;
+        position: relative;
         h2 {
-            color: #fff;
             font-size: 20px;
+        }
+        i {
+            font-size: 20px;
+            cursor: pointer;
+            transition: .5s linear ;
+            -webkit-transition: .5s linear ;
+            -moz-transition: .5s linear ;
+            -ms-transition: .5s linear ;
+            -o-transition: .5s linear ;
+        }
+        .colors {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            right: 40px;
+            width: 170px;
+            height: 30px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            width: 0px;
+            >div {
+                background-color: blue;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                &.color-1 {
+                    background-color: #16a086;
+                }
+                &.color-2 {
+                    background-color: #db4c3f;
+                }
+                &.color-3 {
+                    background-color: #1f1432;
+                }
+                &.color-4 {
+                    background-color: #59bbd8;
+                }
+            }
         }
     }
     // Add
@@ -40,7 +91,7 @@ $mainPadding : 10px;
             border: {
                 top : 0;
                 right: 0;
-                bottom: 1px solid $mainColor;
+                bottom: 1px solid var(--main-color);
                 left: 0;
             }
             &:focus-visible {
@@ -49,7 +100,7 @@ $mainPadding : 10px;
         }
         input[type="submit"] {
             border: 0;
-            background: $mainColor;
+            background: var(--main-color);
             color: #fff;
             padding: 5px 15px;
             font-weight: bold;
@@ -68,7 +119,7 @@ $mainPadding : 10px;
             width: 2px;
         }
         &::-webkit-scrollbar-thumb {
-            background: $mainColor; 
+            background: var(--main-color); 
             border-radius: 10px;
         }
         .tool {
@@ -105,7 +156,7 @@ $mainPadding : 10px;
                     cursor: pointer;
                 }
                 .fa-pen {
-                    color: $mainColor;
+                    color: var(--main-color);
                     cursor: pointer;
                 }
             }

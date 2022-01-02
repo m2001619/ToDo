@@ -7,7 +7,7 @@
 .todo {
   width: 500px;
   margin: 30px auto;
-  border: 1px solid #16a086;
+  border: 1px solid var(--main-color);
 }
 @media (max-width: 768px) {
   .todo {
@@ -17,12 +17,64 @@
   }
 }
 .todo header {
-  background-color: #16a086;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  color: #fff;
+  position: relative;
 }
 .todo header h2 {
-  color: #fff;
   font-size: 20px;
+}
+.todo header i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+}
+.todo header .colors {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  right: 40px;
+  width: 170px;
+  height: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 0px;
+}
+.todo header .colors > div {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.todo header .colors > div.color-1 {
+  background-color: #16a086;
+}
+.todo header .colors > div.color-2 {
+  background-color: #db4c3f;
+}
+.todo header .colors > div.color-3 {
+  background-color: #1f1432;
+}
+.todo header .colors > div.color-4 {
+  background-color: #59bbd8;
 }
 .todo .add {
   padding: 10px;
@@ -35,7 +87,7 @@
   padding: 5px;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #16a086;
+  border-bottom: 1px solid var(--main-color);
   border-left: 0;
 }
 @media (max-width: 768px) {
@@ -48,7 +100,7 @@
 }
 .todo .add input[type=submit] {
   border: 0;
-  background: #16a086;
+  background: var(--main-color);
   color: #fff;
   padding: 5px 15px;
   font-weight: bold;
@@ -68,7 +120,7 @@
   width: 2px;
 }
 .todo .tools::-webkit-scrollbar-thumb {
-  background: #16a086;
+  background: var(--main-color);
   border-radius: 10px;
 }
 .todo .tools .tool {
@@ -107,7 +159,7 @@
   cursor: pointer;
 }
 .todo .tools .tool .edit-delete .fa-pen {
-  color: #16a086;
+  color: var(--main-color);
   cursor: pointer;
 }
 .todo .tools .if-empty {
