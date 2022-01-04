@@ -152,7 +152,7 @@ $mainPadding : 10px;
                 gap: 20px;
                 align-items: center;
                 .fa-trash {
-                    color: red;
+                    color: var(--main-color);
                     cursor: pointer;
                 }
                 .fa-pen {

@@ -155,7 +155,7 @@
   align-items: center;
 }
 .todo .tools .tool .edit-delete .fa-trash {
-  color: red;
+  color: var(--main-color);
   cursor: pointer;
 }
 .todo .tools .tool .edit-delete .fa-pen {
